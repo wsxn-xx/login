@@ -71,7 +71,7 @@
 }
 
 #table1{
-    border: 2px rgb(243, 191, 217) solid;
+    border: 2px rgb(240, 154, 197) solid;
     width: 1350px;
     text-align: center;
 }
@@ -82,7 +82,7 @@
 
 #table1 td{
     height: 35px;
-    border: 2px rgb(243, 191, 217) solid;
+    border: 2px rgb(240, 154, 197) solid;
 }
 
 .col1,.col2,.col3,.col6,.col7{
@@ -155,21 +155,21 @@
 /* 详情按钮 */
 #btn0{
     color: white;
-    background-color: #f7c9ed;
+    background-color: rgb(240, 154, 197);
     border: none;
 }
 
 /*编辑按钮*/
 #btn1{
     color: white;
-    background-color:#f7c9ed;
+    background-color:rgb(240, 154, 197);
     border: none;
 }
 
 /*删除按钮*/
 #btn2{
     color: white;
-    background-color:  #f7c9ed;
+    background-color:  rgb(240, 154, 197);
     border: none;
 }
 
@@ -246,12 +246,12 @@
 
 #show0,#show1,#show2,#show3,#show4{
     font-size: 2em;
-    color: #fbc2eb
+    color: rgb(240, 154, 197)
 }
 
 .top00{
     display: inline; 
-    color:#fbc2eb
+    color:rgb(240, 154, 197)
 }
 
 #imgNames{
