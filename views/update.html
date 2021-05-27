@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/login.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="login-form">
+      <form action="/update?id=<%=id%>" method="POST">
+      <div class="form-item">
+        <input type="text" value="<%=name%>" name="name" placeholder="商品名称">
+        <input type="text" value="<%=in_price%>" name="in_price" placeholder="进价">
+        <input type="text" value="<%=price%>" name="price" placeholder="售价">
+        <input type="text" value="<%=i_number%>" name="i_number" placeholder="进货量">
+        <input type="text" value="<%=s_number%>" name="s_number" placeholder="售出量">
+        <input type="text" value="<%=income%>" name="income" placeholder="销售额">
+      </div>
+      <div class="btn"><button type="submit" style="color: white;border-style: none;background: none;" >新增</button></div>
+    </form>
+      <div class="btn-back"></div>
+      <div class="other">
+      </div>
+    </div>
+  </div>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. 不支持Safari、IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

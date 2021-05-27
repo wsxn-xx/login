@@ -5,27 +5,38 @@
 <title>main</title>
 
 <link rel="stylesheet" href="stylesheets/style3.css">
+<link rel="stylesheet" href="stylesheets/appcss.css">
 
 </head>
 <body>
 
 	<div class="wrapper flex_box">
-		<table>
-			<div class="input">
-					
-				<textarea placeholder="商品名称" class="comment"></textarea>
-				<textarea placeholder="进价" class="comment"></textarea>
-				<textarea placeholder="售价" class="comment"></textarea>
-				<textarea placeholder="进货总额" class="comment"></textarea>
-				<textarea placeholder="售出总额" class="comment"></textarea>
-				<textarea placeholder="财政收入" class="comment"></textarea>
-			</div>
-			
-		
-			<div class="button_wrapper">
-				<button>新增</button>
-			
-			</div>
+		<button type="button" onclick="location.href='/add'" >新增</button>
+    商品管理表格
+	<table id="table1" cellspacing="0px" >
+			<tr class="tableTitle">
+				<td class="col1">商品名称</td>
+				<td class="col7">进价</td>
+				<td class="col3">售价</td>
+				<td class="col6">进货量</td>
+				<td class="col2">售出量</td>
+				<td class="col4">收入</td>
+				<td class="col5">操作</td>
+			</tr>
+			<%for (o of data){%>
+			<tr id="xin">
+				<td class="col1"><%=o.name%></td>
+				<td class="col7"><%=o.in_price%></td>
+				<td class="col3"><%=o.price%></td>
+				<td class="col6"><%=o.i_number%></td>
+				<td class="col2"><%=o.s_number%></td>
+				<td class="col4"><%=o.income%></td>
+				<td class="col5" id="wu">
+					<input type="button" value="编辑" id="btn1" onclick="location.href='/update?id=<%=o.id%>'">
+					<input type="button" value="删除" id="btn2" onclick="location.href='/del?id=<%=o.id%>'">
+				</td>
+			</tr>
+			<%}%>
 		</table>
 	
 	</div>

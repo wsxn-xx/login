@@ -1,0 +1,262 @@
+/* 表一 */
+#total1{
+    margin: 0 auto;
+    width: 1400px;
+    border-bottom: 50px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    display: block;
+}
+
+.main{
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+}
+
+/* 代码改 */
+#all{
+    text-align: center;
+}
+
+#all input:not(#clean){
+ margin-left: 10px;
+ margin-right: 60px;
+ border: 1px solid lightgrey;
+}
+
+#all input:not(#clean):not(#found){
+    border-radius: 3px;
+    height: 30px;
+    width: 165px;
+    padding-left: 15px;
+}
+
+#all input:not(#clean):not(#found):focus{
+    border-style:solid;
+    border-color: blue;
+	box-shadow: 0 0 1px blue;
+}
+
+#clean{
+ color: blue;
+ border: none;
+ background-color: white;
+ font-size: 1.2em;
+}
+
+#found{
+ height: 36px;
+ width: 55px;
+ display: inline-block;
+ background-color: #3d83fa;
+ color: white;
+ padding-top: 4px;
+ padding-bottom: 2px;
+ border-radius: 5px;
+}
+
+/*添加按钮*/
+#addTmplFile{
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 35px;
+    width: 120px;
+    background-color: #3d83fa;
+    border-radius: 5px;
+    border: none;
+    padding-bottom: 5px;
+}
+
+#table1{
+    border: 2px rgb(243, 191, 217) solid;
+    width: 1350px;
+    text-align: center;
+}
+
+.tableTitle{
+    font-weight: bold;
+}
+
+#table1 td{
+    height: 35px;
+    border: 2px rgb(243, 191, 217) solid;
+}
+
+.col1,.col2,.col3,.col6,.col7{
+    width: 170px;
+}
+
+.col4{
+    width: 340px;
+}
+
+.col5{
+    width: 250px;
+}
+
+#lowerLbl{
+    padding-top: 30px;
+}
+
+#lowerLbl p{
+    color: gray;
+    display: inline;
+}
+
+#lowerLbl select{
+    color: gray;
+    height: 25px;
+    width: 80px;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+#lowerLbl button:not(#pno){
+    width: 25px;
+    height: 25px;
+    background-color: #F0F2F5;
+    color: gray;
+    padding-top: 2px;
+    border-radius: 5px;
+    border: none;
+}
+
+#lowerLbl input{
+    padding-top: 2px;
+    width: 35px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+#pno{
+    width: 25px;
+    height: 25px;
+    padding-top: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3d83fa;
+    color: white;
+}
+
+.col5:not(#wu) input{
+    margin: 0px 2px 0px 3px;
+}
+
+.col8{
+    display: none;
+}
+
+/* 详情按钮 */
+#btn0{
+    color: white;
+    background-color: #f7c9ed;
+    border: none;
+}
+
+/*编辑按钮*/
+#btn1{
+    color: white;
+    background-color:#f7c9ed;
+    border: none;
+}
+
+/*删除按钮*/
+#btn2{
+    color: white;
+    background-color:  #f7c9ed;
+    border: none;
+}
+
+ /* 添加图片按钮 */
+ .file {
+    position: relative;
+    display: inline-block;
+    background: #ff9800;
+    color:white;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    font-size: 13px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 20px;
+    width: 52px;
+}
+
+.file:hover {
+    color: white;
+    text-decoration-line: none;
+}
+
+.btn3{
+    width: 70px;
+}
+
+/* 表2 */
+#total2{
+    margin: 0 auto;
+    width: 1400px;
+    border-top: 75px solid white;
+    border-bottom: 50px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    display: none;
+}
+
+#total3{
+    margin: 0 auto;
+    width: 1400px;
+    border-top: 75px solid white;
+    border-bottom: 50px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    display: none;
+}
+
+#total3 input{
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+    background-color:  #c79368;
+    border: 2px solid lightgrey;
+    padding-left: 15px;
+}
+
+#show{
+    padding-left: 125px;
+    padding-top: 50px;
+}
+
+.p00{
+    font-size: 1em;
+    color: #ac7b9e
+}
+
+#show0,#show1,#show2,#show3,#show4{
+    font-size: 2em;
+    color: #fbc2eb
+}
+
+.top00{
+    display: inline; 
+    color:#fbc2eb
+}
+
+#imgNames{
+    position: absolute;
+    left: 720px;
+    width: 500px;
+    height: 500px;
+}

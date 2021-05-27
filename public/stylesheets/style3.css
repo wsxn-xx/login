@@ -6,7 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Nunito', sans-serif;
-  background-color: #262527;
+  background-color:rgba(22, 18, 18, 0.904);
   overflow:hidden;
 }
 
@@ -17,7 +17,7 @@ input, textarea, button {
 .wrapper {
   width: 100%;
   height: 100vh;
-  color: #fae881;
+  color: #ffff;
   overflow:hidden;
 }
 
@@ -30,7 +30,7 @@ input, textarea, button {
 
 .box {
   position: absolute;
-  background-color: black;
+  background-color: rgb(177, 120, 146);
   width: 50px;
   height: 50px;
   transition: 0.2s;
@@ -82,7 +82,7 @@ button {
   border-width: 0px;
   border-radius: 5px;
   color: white;
-  background-color: #b69269;
+  background-color:#fbc2eb;
   transition: 0.3s;
   z-index: 1;
 }
