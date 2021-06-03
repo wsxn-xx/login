@@ -73,137 +73,43 @@
   </div>
 
   <!-- product section -->
-
-  <section class="product_section layout_padding">
-    <div class="container-fluid">
-      <div class="heading_container heading_center ">
-        <h2 class="">
-          Our Ice Creams
-        </h2>
-        <p class="col-lg-8 px-0">
-          If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
-        </p>
-      </div>
-      <div class="product_container">
-        <div class="carousel-wrap ">
-          <div class="">
-            <div class="product_owl-carousel owl-carousel">
-              <div class="item">
-                <div class="box ">
-                  <div class="img-box">
-                    <img src="images/i1.png" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box ">
-                  <div class="img-box">
-                    <img src="images/i2.png" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box ">
-                  <div class="img-box">
-                    <img src="images/i3.png" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box ">
-                  <div class="img-box">
-                    <img src="images/i4.png" class="pl-4" alt="" />
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="box ">
-                  <div class="img-box">
-                    <img src="images/i5.png" class="pl-2" alt="" />
-                  </div>
-                </div>
-              </div>
+<% for( o of data ){ %>
+  <section class="about_section about_section2 layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="detail-box pr-md-3">
+            <div class="heading_container">
+              <h2 class="">
+              商品名称：<%=o.name%>
+              </h2>
             </div>
+            <p class="detail_p_mt">
+              价格：￥<%=o.price%>
+            </p>
+            <P>
+              销量：<%=o.s_number%>
+            </P>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box pl-md-3">
+            <img src="images/about-img3.png" class="box_img" alt="about img">
           </div>
         </div>
       </div>
-      <div class="btn-box">
-        <a href="">
-          See More
-        </a>
-      </div>
     </div>
   </section>
-
+  <HR style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin:0;border-top: 3px solid #f8f9fa;" width="100%" color=black SIZE=3>
+  <%}%>
   <!-- product section ends -->
 
   <div class="footer_container">
     <div class="footer_bg_box">
       <img src="images/footer_bg.jpg" alt="">
     </div>
-    <!-- info section -->
 
-    <section class="info_section ">
-      <div class="info_container ">
-        <div class="container">
-          <div class="info_contact ">
-            <a href="#" class="link-box">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Location
-              </span>
-            </a>
-            <a href="#" class="link-box">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                Call +01 1234567890
-              </span>
-            </a>
-            <a href="#" class="link-box">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                demo@gmail.com
-              </span>
-            </a>
-          </div>
-          <div class="social_container">
-            <div class="heading_container heading_center">
-              <h2>
-                Follow Us
-              </h2>
-              <p class="col-md-6 col-lg-5 mx-auto px-0">
-                Aliquam, aut. Quam adipisci error nulla repellendus nihil asperiores, deserunt sed veritatis. Dolores magnam aperiam omnis! Architecto odit consectetur maxime consequatur ipsum.
-              </p>
-            </div>
-            <div class="social-box">
-              <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-              <a href="">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- end info section -->
-
-    <!-- footer section -->
-    <footer class="footer_section">
-      <div class="container">
-        <p>Copyright &copy; 2020.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-      </div>
-    </footer>
-    <!-- footer section -->
-
+   
   </div>
 
   <!-- jQery -->

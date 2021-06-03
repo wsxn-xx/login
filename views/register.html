@@ -86,19 +86,22 @@
           <div class="form_container pr-md-3">
             <form action="/register" method="POST">
               <div>
-                <input name="account" type="text" placeholder="account" />
+                <input name="account" type="text" placeholder="account" required />
               </div>
               <div>
-                <input name="password" type="password" placeholder="password" />
+                <input name="password" type="password" placeholder="password" required />
               </div>
               <div>
-                <input name="phone" type="text" placeholder="phone" />
+                <input name="phone" type="text" placeholder="phone" required />
               </div>
               
               <div class="btn_box">
                 <button type="submit">
                   register
                 </button>
+              </div>
+              <div class="btn_box">
+                <a href="/contact">login</a>
               </div>
             </form>
           </div>

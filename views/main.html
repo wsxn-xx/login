@@ -6,11 +6,20 @@
 
 <link rel="stylesheet" href="stylesheets/style3.css">
 <link rel="stylesheet" href="stylesheets/appcss.css">
+<link rel="stylesheet" href="stylesheets/style5.css">
 
 </head>
 <body>
-
-	<div class="wrapper flex_box">
+	<form action="/select" method="POST" style="width: 1439px;color: white;">
+	    <div id="all">
+			商品名称:<input class="seach" type="text" name="name" >
+			售价:<input class="seach" name="price" >
+			收入:<input class="seach" name="income" >
+			<input type="submit" value="查询" id="found">
+		</div>
+     </form>
+	</div>
+	<div class="wrapper flex_box" >
 		<button type="button" onclick="location.href='/add'" >新增</button>
     商品管理表格
 	<table id="table1" cellspacing="0px" >
@@ -38,12 +47,16 @@
 			</tr>
 			<%}%>
 		</table>
+		
+		<div class="btn_box">
+			<a href="/main" style="color: rgba(0, 0, 0, 0.4);">返回</a>
+		  </div>
 	
 	</div>
 	
 	<div class="cover"></div>
 	
 	<script src="javascripts/script.js"></script>
-	
+	<script src="/javascripts/jquery-3.4.1.min.js"></script>
 	</body>
 	</html>

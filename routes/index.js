@@ -1,6 +1,7 @@
+const { render } = require('ejs');
 var express = require('express');
 var router = express.Router();
-let mysql = require('mysql')
+let mysql = require('mysql');
 
 let connection = mysql.createConnection({
   host:'localhost',
@@ -22,12 +23,42 @@ router.get('/about', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('contact');
 });
-router.get('/product', function(req, res, next) {
-  res.render('product');
-});
+
 router.get('/login', function(req, res, next) {
+
   res.render('login');
 });
+
+router.get('/table', function(req, res, next) {
+
+  res.render('table');
+});
+router.post('/login', function(req, res) {
+  connection.query("select * from user where userName=? and password=?",[req.body.account,req.body.password],(err,data)=>{
+    if(err){
+      res.end("failure");
+    }else{
+      if(data.length>0){
+        res.redirect("/");
+      }else{
+        res.end("failure");
+      }
+    }
+  })
+})
+
+router.get('/product', function(req, res, next) {
+  connection.query('select * from form',function(err,result){
+    if(err){
+      console.log(err);
+      return
+    }
+    res.render('product',{data:result});
+  })
+});
+
+
+
 router.get('/main', function(req, res, next) {
   connection.query('select * from form',function(err,result){
     if(err){
@@ -39,7 +70,7 @@ router.get('/main', function(req, res, next) {
 });
 
 router.get('/add',function(req,res){
-  res.render('add')
+  res.render('add');
 })
 
 router.get('/update',function(req,res){
@@ -70,26 +101,18 @@ router.get('/del',function(req,res){
   })
 })
 
-router.post('/login', function(req, res) {
-  connection.query("select password from user where userName=? and password=?",[req.body.account,req.body.password],(err,data)=>{
-    if(err){
-      res.end("failure")
-    }else{if(data.length>0){res.redirect("/")}else{res.end("failure")}}
-  })
-})
+
+
 router.get('/register', function(req, res, next) {
-  if(err){
-    console.log(err);
-    return
-  }
   res.render('register');
 })
+
 router.post("/register",(req,res)=>{
   connection.query("insert into user(userName,u_telephone,password)values(?,?,?)",[req.body.account,req.body.phone,req.body.password],(err,data)=>{
     if(err){
-      res.end("err"+err)
+      res.end("err"+err);
     }else{
-      res.redirect("/")}
+      res.redirect("/contact")}
   })
 })
 
@@ -106,12 +129,20 @@ router.post('/add',function(req,res){
 
 router.post('/update',function(req,res){
   let body = req.body
-  connection.query('update form set name = ?,in_price = ?,peice = ?,i_number = ?,s_number = ?,income = ? where id = ?',[body.name,body.in_price,body.price,body.i_number,body.s_number,body.income,req.query.id],function(err,result){
+  connection.query('update form set name = ?,in_price = ?,price = ?,i_number = ?,s_number = ?,income = ? where id = ?',[body.name,body.in_price,body.price,body.i_number,body.s_number,body.income,req.query.id],function(err,result){
     if(err){
       console.log(err);
       return
     }
     res.redirect('/main')
+  })
+})
+
+
+router.post('/select',function(req,res){
+  connection.query('select * from form where name = ? or price =? or income =?',[req.body.name,req.body.price,req.body.income],function(err,result){
+   console.log(err);
+    res.render('main',{data:result})
   })
 })
 module.exports = router;
